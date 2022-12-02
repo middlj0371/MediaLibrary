@@ -15,6 +15,7 @@ public class Book
     title = t;
     author = a;
     rating = 0;
+    //System.out.println("Adding book " + t);
   }
   
    /*** Accessor methods ***/
@@ -52,11 +53,13 @@ public class Book
   public void adjustRating(int r) { // Step 7
     if((rating + r <= 10) && (rating + r >= 0)) { // Step 10
       rating += r;
+      System.out.println("Adjusting rating by " + r);
     }
     
   }
 
-  public boolean equals(Book b) { // Step 24
+  public boolean equals(Book b) { // Step 24 
+    //System.out.println("Checking book " + t)
     return b.title.equals(this.title) && b.author.equals(this.author); // Step 26, 29
   }
 }
